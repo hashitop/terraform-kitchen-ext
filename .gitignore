@@ -1,0 +1,6 @@
+.terraform*
+.kitchen
+terraform.tfstate*
+testing.tfvars
+test-centos.sh
+Gemfile.lock
