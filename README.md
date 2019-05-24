@@ -1,6 +1,6 @@
 # Terraform - Kitchen Extensive Suite
 
-This example shows how Terraform driver hooks up with Kitchen framework where the same Terraform provision scripts are tested against multiple regions.
+This example shows how Terraform driver hooks up with Kitchen framework where the same Terraform provision scripts are tested against multiple AWS regions.
 
 ## Terraform
 
