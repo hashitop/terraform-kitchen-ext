@@ -20,6 +20,7 @@ resource "aws_instance" "remote_group" {
   instance_type = "t2.micro"
   key_name      = "${aws_key_pair.extensive_tutorial.key_name}"
   subnet_id     = "${aws_subnet.extensive_tutorial.id}"
+  associate_public_ip_address = true
 
   tags {
     Name      = "kitchen-terraform-test-target-${count.index}"
@@ -113,7 +114,7 @@ resource "aws_internet_gateway" "extensive_tutorial" {
 
 resource "aws_subnet" "extensive_tutorial" {
   availability_zone       = "${var.subnet_availability_zone}"
-  cidr_block              = "192.168.1.0/24"
+  cidr_block              = "192.168.2.0/24"
   map_public_ip_on_launch = "true"
 
   tags {
