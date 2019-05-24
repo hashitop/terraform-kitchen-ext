@@ -28,7 +28,7 @@ fi
 bundle exec kitchen converge ${platform} diagnose --all
 
 #Add a slight delay to ensure the DNS is publicly available
-sleep 15
+sleep 5
 
 bundle exec kitchen verify ${platform} diagnose --all
 
