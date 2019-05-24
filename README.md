@@ -60,7 +60,7 @@ Terraform driver provides `root_module_directory` to encapsulate test wrapper an
 
 ## Run Test
 
-Running test can be done via `run.sh` where it wraps the necessary steps to execute each step of kitchen life-cycle.
+Running test can be done via `run.sh` where it wraps the necessary command to set up AWS variables and to execute each step of kitchen life-cycle.
 
 > ./run.sh "\<**AWS ACCESS KEY**\>" "\<**AWS SECRET KEY**\>" "\<**AWS REGION**\>"
 
