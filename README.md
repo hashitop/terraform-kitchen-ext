@@ -22,9 +22,9 @@ terraform {
 }
 ```
 
-The script create an VPC network using AWS provider with subnet and internet gateway with route table that allows traffic the outside VPC forwarded to the associated subnet. The instances are created with minimum security control with ingress that allows traffic from any source IP address and port as well as egress.
+The script creates a VPC network using AWS provider with subnet and internet gateway that is associated with a route table that allowing traffic from the outside VPC forwarded to the associated subnet inside. The EC2 instances are created with minimum security control under a relaxed ingress and egress rules that allows traffic with any source and destination IP address and ports.
 
-The instances are defined in 2 different groups. The groups of instances are created using `aws_instance`. The control `operating_system` is used to demonstrate ssh connection between 2 groups that are setup with the security group with bare minimum ingress and egress rules.
+The EC2 instances are defined in 2 different groups. The groups of instances are created using `aws_instance`. The control `operating_system` is used to demonstrate ssh connection between 2 groups that are setup with the security group with bare minimum ingress and egress rules.
 
 ```
 resource "aws_instance" "reachable_other_host" {
@@ -41,7 +41,7 @@ resource "aws_instance" "reachable_other_host" {
 }
 ```
 
-The random provider gives us a range of random value generator, in this case, the `random_string` resource which is used to generate alphanumeric characters with optionally includes special characters.
+The `random` provider gives us a range of random value generators, in this case, the `random_string` resource which is used to generate alphanumeric characters with optionally includes special characters where set to `false`.
 
 ```
 resource "random_string" "key_name" {
